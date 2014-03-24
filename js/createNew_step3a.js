@@ -43,7 +43,9 @@ $(document).on('pageshow', '#createNew_step3a', function(event) {
 		        function(position) {
 		        	//get postion
 		            latitude = position.coords.latitude;
-		            longitude = position.coords.longitude;       
+		            longitude = position.coords.longitude;   
+		            alert("latitude:"+latitude);
+		            alert("longitude:"+longitude);    
 		            //search locatoins via Geolocation  
 		            //renderLocationByGeocode();
 		            getLocationDataFromServer(URL_GET_LOCATION,{Geocode:[longitude,latitude]});
