@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First group test</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+</head>
+
+<body>
+    <div id="createNewPage" data-role="page">
+        <header>
+            <a data="home.html" class="leaveThisPage">
+                <img class="imgClose" src="images/close.png" />
+            </a>
+            <a href="#settingsDialog" data-rel="popup">
+                <img id="settings" src="images/settings.png" />
+            </a>
+
+        </header>
+        <div role="main" class="body">
+
+            <section class="standardMargin">
+                <h1>Create New Contact</h1>
+
+                <section class="pickers">
+                    <label class="datePicker">
+                        <input name="myDate" id="myDate" type="text" data-role="none" placeholder="mm/dd/yyyy" value="" />
+                    </label>
+
+
+                    <label class="timePicker">
+                        <input name="myTime" id="myTime" type="text" data-role="none" placeholder="hh:mm am" value="" />
+                    </label>
+                </section>
+
+                <div id="selectItems" class="bottomPart">
+                    <label for="Division">Division</label>
+                    <select name="Division" id="Division" class="step1">
+                        <option class="originalOption" value="">- select -</option>
+                    </select>
+
+                    <label for="Company">Company</label>
+                    <select name="Company" id="Company" class="step2">
+                        <option class="originalOption" value="">- select -</option>
+                    </select>
+
+                    <label for="District">District</label>
+                    <select name="District" id="District" class="step3">
+                        <option class="originalOption" value="">- select -</option>
+                    </select>
+
+                    <label for="ContactType">Contact Type</label>
+                    <select name="ContactType" id="ContactType">
+                        <option class="originalOption" value="">- select -</option>
+                    </select>
+                </div>
+                <section class="createNav">
+                    <a id="deleteDraftBtn" class="button secondary icon icon-leftAlign prev button-left">Delete</a>
+                    <a id="stepNxtBtn" class="button primary icon next button-right">Next</a>
+                </section>
+
+                <ul class="stepIndicator">
+                    <li>Step 1 of 4</li>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+
+            <div data-role="popup" id="delDraftDialog">
+                <header class="standardMargin ui-popup">
+                    <span>Delete Draft</span>
+                </header>
+                <section class="standardMargin">
+                    About to delete current draft. Allow this?
+                </section>
+                <footer class="standardMargin">
+                    <a href="#" data-rel="back" class="button secondary icon cancel button-left">No</a>
+                    <a href="#" id="delDraftOkBtn" class="button primary icon next button-right">Yes</a>
+                </footer>
+            </div>
+
+            <div data-role="popup" id="saveDraftDialog1">
+                <header class="standardMargin ui-popup">
+                    <span>Save Draft</span>
+                </header>
+                <section class="standardMargin">
+                    Do you want to save current draft?
+                </section>
+                <footer class="standardMargin">
+                    <a href="#" id="saveDraftNoBtn1" class="button secondary icon cancel button-left">No</a>
+                    <a href="#" id="saveDraftYesBtn1" class="button primary icon next button-right">Yes</a>
+                </footer>
+            </div>
+
+            <div data-role="popup" id="settingsDialog" class="popupMenu">
+                <a id="setting_logout">Logout</a>
+            </div>
+
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a data="home.html" class="leaveThisPage">
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data="myDrafts.html" class="leaveThisPage">
+                            <div>My Drafts</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data="myTasks.html" class="leaveThisPage">
+                            <div>My Tasks</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data="myContacts.html" class="leaveThisPage">
+                            <div>My Contacts</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="">
+                            <div>New</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

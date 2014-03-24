@@ -1,0 +1,40 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration: none;}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/*
+
+Questions:
+What page to page transition?
+
+Device widths? Just iPhone, or do I need to make them liquid to accomodate Android resolutions as well?
+
+Allow zooming?
+
+What do I do for the photo pages? Is that something that the PhoneGap people deal with and I can ignore?
+
+CSS3 and HTML5 is safe to use with PhoneGap, right?
+
+Do we have to worry about fonts? Does only the computer compiling the app need to have it? We only need Helvetica
+and Helvetica condensed, but if it's not compiled on a Mac, that may be a problem
+
+What's the behavior of the settings button?
+
+Nav links on the bottom: position fixed?
+
+Will the Choose Location search box need an autocomplete? Will I have to draw that up?
+
+Everything about Blackberry.
+
+*/

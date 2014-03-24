@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First group test</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="lib/jquery.mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+
+		<link rel="stylesheet" href="css/main.css" />
+
+		<script src="lib/jquery-2.0.3.min.js"></script>
+		<script src="lib/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="completeTask">
+			<header>
+				<a href="#" data-rel="back"><img class="imgClose" src="images/close.png"/></a>
+				<img src="images/settings.png" />
+			</header>
+			<div role="main" class="body">
+				<section class="standardMargin separatedSection top">
+					<h1>Observation</h1>
+					<p>
+						This is where the description of the observation is displayed. This text is not editable.
+					</p>
+				</section>
+
+				<section class="standardMargin separatedSection top bottom">
+					<h3>Task</h3>
+					<p>Clear the railway of debris</p>
+				</section>
+
+				<section class="standardMargin separatedSection top bottom">
+					<h3>Action Taken</h3>
+					<textarea placeholder="Enter the action you have taken to complete this task"></textarea>
+				</section>
+				
+				<section class="standardMargin separatedSection bottom">
+					<a href="home.html" class="button primary icon next">Mark as Completed</a>
+				</section>
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="home.html"><div>Home</div></a></li>
+					<li><a href="myDrafts.html"><div>My Drafts</div></a></li>
+					<li class="active"><a href="myTasks.html"><div>My Tasks</div></a></li>
+					<li><a href="myContacts.html"><div>My Contacts</div></a></li>
+					<li><a href="createNew.html"><div>New</div></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>

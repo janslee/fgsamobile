@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First group test</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+    <div data-role="page" id="createNew_step3a">
+        <header>
+            <a data="home.html" class="leaveThisPage">
+                <img class="imgClose" src="images/close.png" />
+            </a>
+            <a href="#settingsDialog" data-rel="popup">
+                <img id="settings" src="images/settings.png" />
+            </a>
+        </header>
+        <div role="main" class="body">
+            <h1 class="standardMargin">Choose Location</h1>
+            <div class="chooseLocSearch standardMargin" id="btnSearchLoc">
+                <input id="strLocation" type="text" placeholder="Search" />
+            </div>
+
+            <ul class="locationChoice">
+                <li>
+                    <div class="expanded">Near Your Location</div>
+                    <ul class="nearList">
+
+                    </ul>
+                </li>
+                <li>
+                    <div class="collapsed">Other Locations in Region</div>
+                    <ul class="otherList">
+                    </ul>
+                </li>
+            </ul>
+
+            <section class="createNav standardMargin">
+                <a href="createNew_step2a.html" class="button secondary icon icon-leftAlign prev button-left">Back</a>
+                <a id="stepNxtBtnLoc" href="#" class="button primary icon next button-right">Next</a>
+            </section>
+
+            <ul class="stepIndicator">
+                <li>Step 3 of 4</li>
+                <li></li>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+            </ul>
+
+        </div>
+        <div data-role="popup" id="saveDraftDialog3">
+            <header class="standardMargin ui-popup">
+                <span>Save Draft</span>
+            </header>
+            <section class="standardMargin">
+                Do you want to save current draft?
+            </section>
+            <footer class="standardMargin">
+                <a href="#" id="saveDraftNoBtn3" class="button secondary icon cancel button-left">No</a>
+                <a href="#" id="saveDraftYesBtn3" class="button primary icon next button-right">Yes</a>
+            </footer>
+        </div>
+        <div data-role="popup" id="settingsDialog" class="popupMenu">
+            <a id="setting_logout">Logout</a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a data="home.html" class="leaveThisPage">
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myDrafts.html" class="leaveThisPage">
+                        <div>My Drafts</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myTasks.html" class="leaveThisPage">
+                        <div>My Tasks</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myContacts.html" class="leaveThisPage">
+                        <div>My Contacts</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="">
+                        <div>New</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="popup" id="chooseLocationDialog">
+            <header class="standardMargin">
+                <span>Location</span>
+            </header>
+            <section class="standardMargin">
+                Application Name would like to use your current location. Allow this?
+            </section>
+            <footer class="standardMargin">
+                <a href="#" data-rel="back" class="button secondary icon cancel button-left">No</a>
+                <a href="#" data-rel="back" class="button primary icon next button-right" id="btnTurnGPS">Yes</a>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

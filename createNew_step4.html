@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First group test</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/commons/fgaDB.js"></script>
+    <script src="js/commons/utils.js"></script>
+    <script src="js/createNew_step4.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="createNew_step4">
+        <header>
+            <a data="home.html" class="leaveThisPage">
+                <img class="imgClose" src="images/close.png" />
+            </a>
+            <a href="#settingsDialog" data-rel="popup">
+                <img id="settings" src="images/settings.png" />
+            </a>
+        </header>
+
+        <div role="main" class="body">
+            <h1 class="standardMargin">Observation</h1>
+            <div class="chooseLocSearch standardMargin">
+                <textarea id="observation" placeholder="Description"></textarea>
+            </div>
+
+            <div id="taskControlDiv">
+            <h2 class="standardMargin">Tasks</h2>
+            <h3 class="standardMargin">You can add up to 3 tasks:</h3>
+
+            <ul class="addTasks">
+                <li>
+                    <div class="standardMargin button tertiary icon add">Add Task</div>
+
+                    <div class="editTask standardMargin inactive">
+                        <input id="taskName1" type="text" placeholder="Task name" />
+
+                        <div class="chooseLocSearch">
+                            <input id="searchUserId1" type="hidden" />
+                            <input id="searchName1" type="text" placeholder="Assign to" />
+                        </div>
+                        <div id="dpList1" class="dp_list">
+                            <ul>
+                                <script id="searchList1" type="text/html">
+                                    <%
+                                    for (var i = 0; i < list.length; i++) {
+                                        if (i % 2 == 0) { %> <li id = "dpListItem"
+                                            class="dp_odd"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } else { %> <li id = "dpListItem"
+                                            class="dp_even"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } %> <%
+                                    } %>
+                                </script>
+                            </ul>
+                        </div>
+                        <div class="controls">
+                            <a href="#" id="cancelTask1" class="button tertiary icon cancel button-left">Cancel</a>
+                            <a href="#" id="saveTask1" class="button primary icon add button-right">Save</a>
+                        </div>
+                    </div>
+
+                    <div id="showTaskName1" class="reviewTask standardMargin icon cancel inactive fullWidth">
+                    </div>
+                </li>
+                <li>
+                    <div class="standardMargin button tertiary icon add">Add Task</div>
+
+                    <div class="editTask standardMargin inactive">
+                        <input id="taskName2" type="text" placeholder="Task name" />
+
+                        <div class="chooseLocSearch">
+                            <input id="searchUserId2" type="hidden" />
+                            <input id="searchName2" type="text" placeholder="Assign to" />
+                        </div>
+                        <div id="dpList2" class="dp_list">
+                            <ul>
+                                <script id="searchList2" type="text/html">
+                                    <%
+                                    for (var i = 0; i < list.length; i++) {
+                                        if (i % 2 == 0) { %> <li id = "dpListItem"
+                                            class="dp_odd"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } else { %> <li id = "dpListItem"
+                                            class="dp_even"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } %> <%
+                                    } %>
+                                </script>
+                            </ul>
+                        </div>
+                        <div class="controls">
+                            <a href="#" id="cancelTask2" class="button tertiary icon cancel button-left">Cancel</a>
+                            <a href="#" id="saveTask2" class="button primary icon add button-right">Save</a>
+                        </div>
+                    </div>
+
+                    <div id="showTaskName2" class="reviewTask standardMargin icon cancel inactive fullWidth">
+                    </div>
+                </li>
+                <li>
+                    <div class="standardMargin button tertiary icon add">Add Task</div>
+
+                    <div class="editTask standardMargin inactive">
+                        <input id="taskName3" type="text" placeholder="Task name" />
+
+                        <div class="chooseLocSearch">
+                            <input id="searchUserId3" type="hidden" />
+                            <input id="searchName3" type="text" placeholder="Assign to" />
+                        </div>
+                        <div id="dpList3" class="dp_list">
+                            <ul>
+                                <script id="searchList3" type="text/html">
+                                    <%
+                                    for (var i = 0; i < list.length; i++) {
+                                        if (i % 2 == 0) { %> <li id = "dpListItem"
+                                            class="dp_odd"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } else { %> <li id = "dpListItem"
+                                            class="dp_even"> <%= list[i].Name %> </li>
+										<input type="hidden" value="<%= list[i].UserId %>" /> <%
+                                        } %> <%
+                                    } %>
+                                </script>
+                            </ul>
+                        </div>
+                        <div class="controls">
+                            <a href="#" id="cancelTask3" class="button tertiary icon cancel button-left">Cancel</a>
+                            <a href="#" id="saveTask3" class="button primary icon add button-right">Save</a>
+                        </div>
+                    </div>
+
+                    <div id="showTaskName3" class="reviewTask standardMargin icon cancel inactive fullWidth">
+                    </div>
+                </li>
+
+            </ul>
+            </div>
+
+            <section class="createNav standardMargin">
+                <a href="createNew_step3a.html" class="button secondary icon icon-leftAlign prev button-left">Back</a>
+                <a href="#" id="submitBtn" class="button primary icon next button-right">Next</a>
+            </section>
+
+            <ul class="stepIndicator">
+                <li>Step 4 of 4</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="active"></li>
+            </ul>
+
+        </div>
+
+
+        <div data-role="popup" id="saveDraftDialog4">
+            <header class="standardMargin ui-popup">
+                <span>Save Draft</span>
+            </header>
+            <section class="standardMargin">
+                Do you want to save current draft?
+            </section>
+            <footer class="standardMargin">
+                <a href="#" id="saveDraftNoBtn4" class="button secondary icon cancel button-left">No</a>
+                <a href="#" id="saveDraftYesBtn4" class="button primary icon next button-right">Yes</a>
+            </footer>
+        </div>
+        <div data-role="popup" id="settingsDialog" class="popupMenu">
+            <a id="setting_logout">Logout</a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a data="home.html" class="leaveThisPage">
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myDrafts.html" class="leaveThisPage">
+                        <div>My Drafts</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myTasks.html" class="leaveThisPage">
+                        <div>My Tasks</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myContacts.html" class="leaveThisPage">
+                        <div>My Contacts</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="">
+                        <div>New</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="popup" id="errorTaskDialog">
+            <header class="standardMargin">
+                <span>Edit Task</span>
+            </header>
+            <section class="standardMargin">
+                Please input the task name and choose a valid person.
+            </section>
+            <footer class="standardMargin">
+                <a href="#" data-rel="back" class="button primary icon next button-right" id="taskBtnYes">OK</a>
+            </footer>
+        </div>
+
+        <div data-role="popup" id="errorObservationDialog">
+            <header class="standardMargin">
+                <span>Edit Task</span>
+            </header>
+            <section class="standardMargin">
+                Please input the description.
+            </section>
+            <footer class="standardMargin">
+                <a href="#" data-rel="back" class="button primary icon next button-right" id="taskBtnYes">OK</a>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

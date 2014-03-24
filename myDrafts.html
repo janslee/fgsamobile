@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First group test</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="lib/jquery.mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		
+		<link rel="stylesheet" href="css/main.css" />
+		
+		<script src="lib/jquery-2.0.3.min.js"></script>
+		<script src="lib/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+		<script src="lib/template.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/commons/fgaDB.js"></script>
+		<script src="js/commons/utils.js"></script>
+		<script src="js/myDrafts.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="myDrafts">
+			<header>
+            <a href="#settingsDialog" data-rel="popup">
+                <img id="settings" src="images/settings.png" />
+            </a>
+			</header>
+			<div role="main" class="body">
+				<div class="standardMargin">
+					<h1>My Drafts <span id="draftCount">(0)</span></h1>	
+						
+					<div class="draftWrapper">
+					<script id="myDraftList" type="text/html">
+					<% for (var i = 0; i < list.length; i++) { %>
+						<div class="draftBlock icon next" id="draftItem">
+							<input type="hidden" value="<%= list[i].Id %>" />
+							<div><div class="icon-diamond red"><div>!</div></div><%= list[i].Description %></div>
+							<p class="createdDate"><%= list[i].ContactType %> Created on <%= list[i].Created %></p>
+						</div>
+					<% } %>
+					</script>
+					</div>
+				</div>
+            <div data-role="popup" id="settingsDialog" class="popupMenu">
+                <a id="setting_logout">Logout</a>
+            </div>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="home.html"><div>Home</div></a></li>
+						<li class="active"><a href="myDrafts.html"><div>My Drafts</div></a></li>
+						<li><a href="myTasks.html"><div>My Tasks</div></a></li>
+						<li><a href="myContacts.html"><div>My Contacts</div></a></li>
+						<li><a class="createNewBtn" href="#"><div>New</div></a></li>
+					</ul>
+				</div>
+				
+			</div>
+
+			
+		</div>
+		
+	</body>
+</html>

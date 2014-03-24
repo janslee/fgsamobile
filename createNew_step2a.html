@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First group test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+</head>
+
+<body>
+    <div data-role="page" id="createNew_step2a">
+        <header>
+            <a data="home.html" class="leaveThisPage">
+                <img class="imgClose" src="images/close.png" />
+            </a>
+            <a href="#settingsDialog" data-rel="popup">
+                <img id="settings" src="images/settings.png" />
+            </a>
+        </header>
+        <div role="main" class="body">
+            <h1 class="standardMargin">Create New Contact</h1>
+
+            <h3 class="standardMargin">Add up to 5 images:</h3>
+
+            <ul class="photoList">
+                <li>
+                    <a href="#addPhotoDialog" data-rel="popup" data-transition="pop" data-position-to="window">
+                        <div class="add" id="add1">Add Photo
+                            <img src="images/icon_plus.png" />
+                        </div>
+                    </a>
+                    <div class="img-wrap" id="preImageDiv1" style="display:none;width:100%;">
+                        <span class="close">&times;</span>
+                        <img style="margin:0 auto;width:93%;" id="preImage1" src="" />
+                    </div>
+                </li>
+                <li>
+                    <a href="#addPhotoDialog" data-rel="popup" data-transition="pop" data-position-to="window">
+                        <div class="add" id="add2">Add Photo
+                            <img src="images/icon_plus.png" />
+                        </div>
+                    </a>
+                    <div class="img-wrap" id="preImageDiv2" style="display:none;width:100%;">
+                        <span class="close">&times;</span>
+                        <img style="margin:0 auto;width:93%;" id="preImage2" src="" />
+                    </div>
+                </li>
+                <li>
+                    <a href="#addPhotoDialog" data-rel="popup" data-transition="pop" data-position-to="window">
+                        <div class="add" id="add3">Add Photo
+                            <img src="images/icon_plus.png" />
+                        </div>
+                    </a>
+                    <div class="img-wrap" id="preImageDiv3" style="display:none;width:100%;">
+                        <span class="close">&times;</span>
+                        <img style="margin:0 auto;width:93%;" id="preImage3" src="" />
+                    </div>
+                </li>
+                <li>
+                    <a href="#addPhotoDialog" data-rel="popup" data-transition="pop" data-position-to="window">
+                        <div class="add" id="add4">Add Photo
+                            <img src="images/icon_plus.png" />
+                        </div>
+                    </a>
+                    <div class="img-wrap" id="preImageDiv4" style="display:none;width:100%;">
+                        <span class="close">&times;</span>
+                        <img style="margin:0 auto;width:93%;" id="preImage4" src="" />
+                    </div>
+                </li>
+                <li>
+                    <a href="#addPhotoDialog" data-rel="popup" data-transition="pop" data-position-to="window">
+                        <div class="add" id="add5">Add Photo
+                            <img src="images/icon_plus.png" />
+                        </div>
+                    </a>
+                    <div class="img-wrap" id="preImageDiv5" style="display:none;width:100%;">
+                        <span class="close">&times;</span>
+                        <img style="margin:0 auto;width:93%;" id="preImage5" src="" />
+                    </div>
+                </li>
+            </ul>
+
+            <section class="createNav standardMargin">
+                <a href="createNew.html" class="button secondary icon icon-leftAlign prev button-left">Back</a>
+                <a href="createNew_step3a.html" id="step2NxtBtn" class="button primary icon next button-right">Next</a>
+            </section>
+            <ul class="stepIndicator">
+                <li>Step 2 of 4</li>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+
+        <div data-role="popup" id="saveDraftDialog2">
+            <header class="standardMargin ui-popup">
+                <span>Save Draft</span>
+            </header>
+            <section class="standardMargin">
+                Do you want to save current draft?
+            </section>
+            <footer class="standardMargin">
+                <a href="#" id="saveDraftNoBtn2" class="button secondary icon cancel button-left">No</a>
+                <a href="#" id="saveDraftYesBtn2" class="button primary icon next button-right">Yes</a>
+            </footer>
+        </div>
+        <div data-role="popup" id="settingsDialog" class="popupMenu">
+            <a id="setting_logout">Logout</a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a data="home.html" class="leaveThisPage">
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myDrafts.html" class="leaveThisPage">
+                        <div>My Drafts</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myTasks.html" class="leaveThisPage">
+                        <div>My Tasks</div>
+                    </a>
+                </li>
+                <li>
+                    <a data="myContacts.html" class="leaveThisPage">
+                        <div>My Contacts</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="">
+                        <div>New</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="popup" id="addPhotoDialog">
+            <header class="standardMargin ui-popup">
+                <span class="icon add">Add photo</span>
+            </header>
+            <section class="standardMargin separatedSection top">
+                <a href="#" class="button primary icon next fullWidth" id="tp">Take Photo</a>
+                <a href="#" class="button primary icon next fullWidth" id="ce">Choose Existing</a>
+            </section>
+            <footer class="standardMargin separatedSection bottom">
+                <a href="#" data-rel="back" class="button tertiary icon cancel">Cancel</a>
+            </footer>
+        </div>
+
+        <div data-role="popup" id="delPhotoDialog">
+            <header class="standardMargin ui-popup">
+                <span>Delete Photo</span>
+            </header>
+            <section class="standardMargin">
+                About to delete current photo. Allow this?
+            </section>
+            <footer class="standardMargin">
+                <a href="#" data-rel="back" class="button secondary icon cancel button-left">No</a>
+                <a href="#" id="delPhotoOkBtn" class="button primary icon next button-right">Yes</a>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
